@@ -2,7 +2,6 @@
 # with following call:
 # >rix::rix(r_ver = "976fa3369d722e76f37c77493d99829540d43845",
 #  > r_pkgs = c("quarto",
-#  > "radian",
 #  > "tidyverse"),
 #  > system_pkgs = c("quarto",
 #  > "curl",
@@ -31,7 +30,7 @@
 let
  pkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/0bd59c54ef06bc34eca01e37d689f5e46b3fe2f1.tar.gz") {};
  rpkgs = builtins.attrValues {
-  inherit (pkgs.rPackages) quarto radian tidyverse;
+  inherit (pkgs.rPackages) quarto tidyverse;
 };
  git_archive_pkgs = [(pkgs.rPackages.buildRPackage {
     name = "rix";
