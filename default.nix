@@ -17,7 +17,7 @@ let
   inherit (pkgs.rPackages) dplyr httr ggplot2 languageserver;
 };
    system_packages = builtins.attrValues {
-  inherit (pkgs) R glibcLocalesUtf8 libcurl4-openssl-dev;
+  inherit (pkgs) R glibcLocalesUtf8 openssl;
 };
   in
   pkgs.mkShell {
