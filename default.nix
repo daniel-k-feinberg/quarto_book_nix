@@ -5,7 +5,7 @@
 #  > "ggplot2"),
 #  > system_pkgs = NULL,
 #  > git_pkgs = NULL,
-#  > ide = "code",
+#  > ide = "rstd=",
 #  > project_path = ".",
 #  > overwrite = TRUE)
 # It uses nixpkgs' revision 0bd59c54ef06bc34eca01e37d689f5e46b3fe2f1 for reproducibility purposes
@@ -14,7 +14,7 @@
 let
  pkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/0bd59c54ef06bc34eca01e37d689f5e46b3fe2f1.tar.gz") {};
  rpkgs = builtins.attrValues {
-  inherit (pkgs.rPackages) dplyr ggplot2 languageserver;
+  inherit (pkgs.rPackages) dplyr curl openssl httr ggplot2 languageserver;
 };
    system_packages = builtins.attrValues {
   inherit (pkgs) R glibcLocalesUtf8 ;
