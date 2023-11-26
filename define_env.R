@@ -3,12 +3,12 @@ library(rix)
 rix::rix(
   r_ver = "4.2.3",
   r_pkgs = c(
-    "quarto", 
-    "tidyverse"
+    "quarto, gt"
   ),
   system_pkgs = c(
     "quarto", 
-    "curl", 
+    "curl",
+    "gh", 
     "openssl"
   ),
   git_pkgs = list(package_name = "rix",
