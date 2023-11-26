@@ -29,7 +29,7 @@
 # which will install R version 4.3.1
 # Report any issues to https://github.com/b-rodrigues/rix
 let
- pkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/976fa3369d722e76f37c77493d99829540d43845.tar.gz") {};
+ pkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/0bd59c54ef06bc34eca01e37d689f5e46b3fe2f1.tar.gz") {};
  rpkgs = builtins.attrValues {
   inherit (pkgs.rPackages) quarto radian tidyverse;
 };
