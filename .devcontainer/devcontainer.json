@@ -1,7 +1,7 @@
 {
 	"name": "Nix Env",
 	"build": {
-		"dockerfile": "Dockerfile",
+		"dockerfile": "Dockerfile"
 	},
 
 	// Install extensions
@@ -38,10 +38,9 @@
 			]
 		}
 	},
-
 	// Use 'postAttachCommand' to run commands after the container is started.
-	//"postAttachCommand": "curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install"
+	//"postCreateCommand": "",
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root
-	// "remoteUser": "root"
+	"remoteUser": "root"
 }
