@@ -1,0 +1,47 @@
+{
+	"name": "Nix Env",
+	"build": {
+		"dockerfile": "Dockerfile",
+	},
+
+	// Install extensions
+	"customizations": {
+		"vscode": {
+			"extensions": [
+
+				// infra tools
+				"donjayamanne.githistory",
+				"GitHub.codespaces",
+				"ms-azuretools.vscode-docker",
+				"GitHub.copilot",
+				"GitHub.copilot-chat",
+				"peakchen90.open-html-in-browser",
+				"mechatroner.rainbow-csv",
+				"GitHub.vscode-github-actions",
+
+				// language support
+				"quarto.quarto",
+				"REditorSupport.r",
+				"RDebugger.r-debugger",
+				"Ikuyadeu.r-pack",
+				"DavidAnson.vscode-markdownlint",
+
+				// theming
+				"GitHub.github-vscode-theme",
+				"cosmicsarthak.cosmicsarthak-neon-theme",
+				"hassanoof.theme",
+				"PKief.material-icon-theme",
+				
+				// vscode behavior
+				"vsls-contrib.codetour",
+				"dqisme.sync-scroll"
+			]
+		}
+	},
+
+	// Use 'postAttachCommand' to run commands after the container is started.
+	"postAttachCommand": "curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install"
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root
+	// "remoteUser": "root"
+}
